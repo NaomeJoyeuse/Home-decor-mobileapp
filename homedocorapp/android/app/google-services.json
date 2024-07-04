@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "258341298116",
+    "project_id": "home-decor-app-b2d9a",
+    "storage_bucket": "home-decor-app-b2d9a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:258341298116:android:a0595bf88470de56c34e91",
+        "android_client_info": {
+          "package_name": "com.example.homedocorapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_KZSDvqRJ9337sL-hIBah9SvUXnHzta4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
