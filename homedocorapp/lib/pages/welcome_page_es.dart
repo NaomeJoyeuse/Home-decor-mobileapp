@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:homedocorapp/components/app_drawer.dart';
+import 'package:homedocorapp/components/app_drawerEs.dart';
 
 
-class WelcomePage extends StatelessWidget {
-  WelcomePage({Key? key}) : super(key: key);
+class WelcomePageEs extends StatelessWidget {
+  WelcomePageEs({Key? key}) : super(key: key);
 
   void navigateToLogin(BuildContext context) {
-    Navigator.pushNamed(context, '/login');
+    Navigator.pushNamed(context, '/login_es'); // Ensure the correct route for Spanish login
   }
 
   @override
@@ -14,19 +14,19 @@ class WelcomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text('Home Decor App'),
+        title: Text('Aplicación de Decoración del Hogar'),
         leading: Builder(
           builder: (BuildContext context) {
             return IconButton(
               icon: Icon(Icons.menu),
               onPressed: () {
-                Scaffold.of(context).openDrawer(); 
+                Scaffold.of(context).openDrawer(); // Open the global drawer
               },
             );
           },
         ),
       ),
-      drawer: AppDrawer(), 
+      drawer: AppDrawerEs(), // Call the global drawer here
       body: SafeArea(
         child: Center(
           child: Padding(
@@ -35,14 +35,14 @@ class WelcomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
-                  'lib/Assets/imgs/Hands.png', 
+                  'lib/images/welcome_img.png', // Update with an appropriate image
                   width: 300,
                   height: 350,
                   fit: BoxFit.cover,
                 ),
                 SizedBox(height: 30),
                 Text(
-                  'Welcome to your home Decor shop!',
+                  '¡Bienvenido a tu tienda de Decoración del Hogar!',
                   style: TextStyle(
                     fontSize: 28,
                     fontWeight: FontWeight.bold,
@@ -51,7 +51,7 @@ class WelcomePage extends StatelessWidget {
                 ),
                 SizedBox(height: 20),
                 Text(
-                  'Experience the best online shopping platform. Discover a wide range of products for your house at amazing prices.',
+                  'Experimenta la mejor plataforma de compras en línea. Descubre una amplia gama de productos para tu hogar a precios increíbles.',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 16,
@@ -66,7 +66,7 @@ class WelcomePage extends StatelessWidget {
                     padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
                     textStyle: TextStyle(fontSize: 18),
                   ),
-                  child: Text('Start Shopping'),
+                  child: Text('Comienza a Comprar'),
                 ),
               ],
             ),

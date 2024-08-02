@@ -59,5 +59,8 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>NSContactsUsageDescription</key>
+	<string>We need access to your contacts to help you sync your contact list with our service and connect with friends.</string>
+
 </dict>
 </plist>

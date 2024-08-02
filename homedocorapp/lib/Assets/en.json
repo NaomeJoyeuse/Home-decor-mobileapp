@@ -1,0 +1,33 @@
+{
+    "profile": "Profile",
+    "pick_image": "Pick Image",
+    "user_details": "User Details Here",
+    "choose_profile_picture": "Choose Profile Picture",
+    "select_from_gallery": "Select from Gallery",
+    "take_a_picture": "Take a Picture",
+    "welcome_message": "Welcome to Our App!",
+    "welcome_description": "We are glad to have you here. Get ready to explore amazing features.",
+    "get_started": "Get Started",
+    "drawer_header": "Naomi space",
+    "home": "Home",
+    "login": "Login",
+    "signup": "Signup",
+    "calculator": "Calculator",
+    "my_profile": "My Profile",
+    "welcome_title": "Welcome to Our App!",
+    "login_welcome": "Welcome back you've been missed!",
+  "email_hint": "Email",
+  "password_hint": "Password",
+  "forgot_password": "Forgot password?",
+  "sign_in": "Sign In",
+  "sign_in_google": "Sign In with Google",
+  "not_a_member": "Not a member?",
+  "register_now": "Register now",
+  "error_incorrect_email": "Incorrect Email",
+  "error_incorrect_email_message": "Please check your email and try again.",
+  "error_incorrect_password": "Incorrect Password",
+  "error_incorrect_password_message": "Please check your password and try again.",
+  "ok": "OK"
+      
+  }
+  

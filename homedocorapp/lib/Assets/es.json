@@ -1,0 +1,34 @@
+{
+    "profile": "Perfil",
+    "pick_image": "Seleccionar imagen",
+    "user_details": "Detalles del usuario aquí",
+    "choose_profile_picture": "Elija la imagen de perfil",
+    "select_from_gallery": "Seleccionar de la galería",
+    "take_a_picture": "Tomar una foto",
+    "welcome_message": "¡Bienvenido a nuestra aplicación!",
+    "welcome_description": "Nos alegra tenerte aquí. Prepárate para explorar funciones increíbles.",
+    "get_started": "Empezar",
+    "drawer_header": "Espacio de Naomi",
+    "home": "Inicio",
+    "login": "Iniciar sesión",
+    "signup": "Registrarse",
+    "calculator": "Calculadora",
+    "my_profile": "Mi perfil",
+    
+     "login_welcome": "¡Bienvenido de nuevo, te hemos extrañado!",
+        "email_hint": "Correo electrónico",
+        "password_hint": "Contraseña",
+        "forgot_password": "¿Olvidaste tu contraseña?",
+        "sign_in": "Iniciar sesión",
+        "sign_in_google": "Iniciar sesión con Google",
+        "not_a_member": "¿No eres miembro?",
+        "register_now": "Regístrate ahora",
+        "error_incorrect_email": "Correo electrónico incorrecto",
+    "error_incorrect_email_message": "Por favor, revisa tu correo electrónico e inténtalo de nuevo.",
+    "error_incorrect_password": "Contraseña incorrecta",
+    "error_incorrect_password_message": "Por favor, revisa tu contraseña e inténtalo de nuevo.",
+    "ok": "OK"
+      
+      
+  }
+  

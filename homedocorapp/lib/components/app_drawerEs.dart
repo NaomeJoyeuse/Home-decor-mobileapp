@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import '../pages/theme.dart';
 
-
-class AppDrawer extends StatelessWidget {
-  const AppDrawer({Key? key}) : super(key: key);
+class AppDrawerEs extends StatelessWidget {
+  const AppDrawerEs({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +14,7 @@ class AppDrawer extends StatelessWidget {
               color: Colors.blue,
             ),
             child: Text(
-              'sales Space',
+              'Espacio de Vendass',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 24,
@@ -26,69 +23,52 @@ class AppDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.home),
-            title: Text('Home'),
+            title: Text('Inicio'),
             onTap: () {
               Navigator.pop(context);
-              Navigator.pushNamed(context, '/welcome');
+              Navigator.pushNamed(context, '/welcome_es');
             },
           ),
           ListTile(
-            leading: Icon(Icons.login),
-            title: Text('Login'),
+            leading: Icon(Icons.settings),
+            title: Text('Iniciar sesión'),
             onTap: () {
               Navigator.pop(context);
-              Navigator.pushNamed(context, '/login');
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.person_add),
-            title: Text('Signup'),
-            onTap: () {
-              Navigator.pop(context);
-              Navigator.pushNamed(context, '/signup');
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.calculate),
-            title: Text('Calculator'),
-            onTap: () {
-              Navigator.pop(context);
-              Navigator.pushNamed(context, '/calculator');
+              Navigator.pushNamed(context, '/login_es');
             },
           ),
           ListTile(
             leading: Icon(Icons.person),
-            title: Text('My Profile'),
+            title: Text('Registrarse'),
             onTap: () {
               Navigator.pop(context);
-              Navigator.pushNamed(context, '/profile');
+              Navigator.pushNamed(context, '/signup_es');
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.calculate),
+            title: Text('Calculadora'),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.pushNamed(context, '/calculator_es');
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.person_2_rounded),
+            title: Text('Mi perfil'),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.pushNamed(context, '/profile_es');
             },
           ),
           // Language change button
           ListTile(
             leading: Icon(Icons.language),
-            title: Text('Change Language'),
+            title: Text('Cambiar idioma'),
             onTap: () {
               _showLanguageDialog(context);
             },
           ),
-          // Theme change button
-          ListTile(
-            leading: Icon(Icons.nightlight_round),
-            title: Text('Change Theme'),
-            trailing: Consumer<ThemeProvider>(
-              builder: (context, themeProvider, child) {
-                return Switch(
-                  value: themeProvider.isDarkMode,
-                  onChanged: (value) {
-                    themeProvider.toggleTheme();
-                  },
-                );
-              },
-            ),
-          ),
-         
-          
         ],
       ),
     );
@@ -99,12 +79,12 @@ class AppDrawer extends StatelessWidget {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text('Select Language'),
+          title: Text('Seleccionar idioma'),
           content: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
               ListTile(
-                title: Text('English'),
+                title: Text('Inglés'),
                 onTap: () {
                   Navigator.of(context).pop();
                   Navigator.pushReplacementNamed(context, '/welcome');

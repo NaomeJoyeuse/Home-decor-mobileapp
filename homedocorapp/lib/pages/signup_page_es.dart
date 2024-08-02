@@ -1,12 +1,13 @@
+// signup_page_es.dart
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:homedocorapp/components/app_drawerEs.dart';
 import 'package:homedocorapp/components/my_button.dart';
 import 'package:homedocorapp/components/my_textfield.dart';
 import 'package:homedocorapp/components/app_drawer.dart';
 
-
-class SignupPage extends StatelessWidget {
-  SignupPage({Key? key}) : super(key: key);
+class SignupPageEs extends StatelessWidget {
+  SignupPageEs({Key? key}) : super(key: key);
 
   final usernameController = TextEditingController();
   final emailController = TextEditingController();
@@ -24,8 +25,8 @@ class SignupPage extends StatelessWidget {
           context: context,
           builder: (context) {
             return AlertDialog(
-              title: Text('Account Created'),
-              content: Text('Your account has been successfully created.'),
+              title: Text('Cuenta Creada'),
+              content: Text('Tu cuenta ha sido creada con éxito.'),
               actions: [
                 TextButton(
                   onPressed: () {
@@ -39,10 +40,10 @@ class SignupPage extends StatelessWidget {
           },
         );
       } on FirebaseAuthException catch (e) {
-        showErrorMessage(context, e.message ?? "An error occurred.");
+        showErrorMessage(context, e.message ?? "Ocurrió un error.");
       }
     } else {
-      showErrorMessage(context, "Passwords don't match");
+      showErrorMessage(context, "Las contraseñas no coinciden");
     }
   }
 
@@ -70,13 +71,13 @@ class SignupPage extends StatelessWidget {
       final UserCredential userCredential = await provider;
       final User? user = userCredential.user;
       if (user != null) {
-        print('User signed in with Google: ${user.displayName}');
-        // Navigate to another screen or handle successful sign-in
-        // Example: Navigator.pushReplacementNamed(context, '/home');
+        print('Usuario inició sesión con Google: ${user.displayName}');
+        // Navegar a otra pantalla o manejar el inicio de sesión exitoso
+        // Ejemplo: Navigator.pushReplacementNamed(context, '/home');
       }
     } catch (e) {
-      print('Error signing in with Google: $e');
-      // Handle errors here
+      print('Error al iniciar sesión con Google: $e');
+      // Manejar errores aquí
     }
   }
 
@@ -96,7 +97,7 @@ class SignupPage extends StatelessWidget {
           },
         ),
       ),
-      drawer: AppDrawer(),
+      drawer: AppDrawerEs(),
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
@@ -106,7 +107,7 @@ class SignupPage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Image.asset(
-                    'lib/Assets/imgs/register.png',
+                    'lib/Assets/imgs/register.jpg',
                     fit: BoxFit.contain,
                     width: 380,
                     height: 200,
@@ -114,7 +115,7 @@ class SignupPage extends StatelessWidget {
                 ),
                 SizedBox(height: 20),
                 Text(
-                  'Join us today!',
+                  '¡Únete a nosotros hoy!',
                   style: TextStyle(
                     color: Color.fromARGB(255, 196, 173, 173),
                     fontSize: 16,
@@ -124,7 +125,7 @@ class SignupPage extends StatelessWidget {
                 // Username textfield
                 MyTextfield(
                   controller: usernameController,
-                  hintText: 'Username',
+                  hintText: 'Nombre de usuario',
                   obscureText: false,
                   prefixIcon: Icon(Icons.person),
                 ),
@@ -132,7 +133,7 @@ class SignupPage extends StatelessWidget {
                 // Email textfield
                 MyTextfield(
                   controller: emailController,
-                  hintText: 'Email',
+                  hintText: 'Correo electrónico',
                   obscureText: false,
                   prefixIcon: Icon(Icons.email),
                 ),
@@ -140,7 +141,7 @@ class SignupPage extends StatelessWidget {
                 // Password textfield
                 MyTextfield(
                   controller: passwordController,
-                  hintText: 'Password',
+                  hintText: 'Contraseña',
                   obscureText: true,
                   prefixIcon: Icon(Icons.lock),
                 ),
@@ -148,7 +149,7 @@ class SignupPage extends StatelessWidget {
                 // Confirm password textfield
                 MyTextfield(
                   controller: confirmPasswordController,
-                  hintText: 'Confirm Password',
+                  hintText: 'Confirmar Contraseña',
                   obscureText: true,
                   prefixIcon: Icon(Icons.lock),
                 ),
@@ -160,7 +161,7 @@ class SignupPage extends StatelessWidget {
                 SizedBox(height: 10),
                 ElevatedButton(
                   onPressed: () => signInWithGoogle(context),
-                  child: Text('Sign Up with Google'),
+                  child: Text('Registrarse con Google'),
                 ),
                 SizedBox(height: 10),
                 Row(
@@ -178,7 +179,7 @@ class SignupPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Already have an account?',
+                      '¿Ya tienes una cuenta?',
                       style: TextStyle(color: Colors.grey[700]),
                     ),
                     const SizedBox(width: 4),
@@ -187,7 +188,7 @@ class SignupPage extends StatelessWidget {
                         Navigator.pushNamed(context, '/login');
                       },
                       child: const Text(
-                        'Login now',
+                        'Inicia sesión ahora',
                         style: TextStyle(
                           color: Colors.blue,
                           fontWeight: FontWeight.bold,
